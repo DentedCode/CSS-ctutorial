@@ -1,0 +1,170 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* basic selector */
+p{
+    /* color: green; */
+  }
+
+#user{
+    background: black;
+    color: green;
+}
+
+.usre-info{
+    font-size: 20px;
+}
+
+ /* Element Selector */
+
+/* descendant selector */
+div p{
+    background: blue;
+    color: white;
+}
+ 
+/* child selector */
+  div > p{
+      color: red;
+  }
+
+/* adjacent selector */
+ div + p {
+     background: aqua;
+ }
+
+/* sibling selector */
+div ~ p{
+    font-weight: bold;
+}
+
+/* Attribute selector */
+[href="about-us.html"] {
+    background: red;
+}
+
+/* pseudo-element selector */
+ div::first-letter{
+     color: red;
+     font-size: x-large;
+ }
+
+ div::first-line{
+     color:blue
+ }
+
+ div::selection{
+     background-color: yellow;
+     color: green
+ }
+
+ div::before{
+     content: "Some Before Content";
+ }
+ div::after{  
+    content: "";
+    background-image: url(https://cdn.shopify.com/s/files/1/1061/1924/files/Hugging_Face_Emoji_2028ce8b-c213-4d45-94aa-21e1a0842b4d_large.png?15202324258887420558);
+    background-size: 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+      
+ }
+
+ 
+/* pseudo-class selector */
+ a:hover{
+     background: black;
+     color: white;
+ }
+ a:link{
+     text-decoration: none;
+ }
+ li:first-child{
+     font-weight: 900;
+ }
+ li:last-child{
+     font-style: italic;
+ }
+ li:nth-child(even){
+     background: grey;
+ }
+ li:nth-child(odd){
+     background: lightgrey;
+ }
+
+ /* CSS properties and values */
+ /* color */
+ h3.pnv{
+    color: rgb(255,0,0, 0.5);
+    background: black; 
+}
+ 
+.section-content{
+    background: url(https://live.staticflickr.com/4561/38054606355_26429c884f_b.jpg);
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.anothr{
+    height: 50px;
+    
+    background: linear-gradient(-90deg, red, yellow, blue);
+}
+/* Font and text */
+.font-me{
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+
+    text-transform: uppercase; 
+    text-align: center;
+}
+ 
+ /* margin and padding */
+  .sec-spn{ 
+      background: red;
+      border: grey solid 5px; 
+      margin: 50px;   
+  }
+
+  .butter{
+      margin-top: 50px;
+      border-radius: 50%;
+  }
+  .butter-1{
+      max-height: 300px;
+      overflow: hidden; 
+  }
+  .float-me{
+      margin-right: 20px;
+      float: right;
+  }
+  .float-2{
+      text-align: center;
+  }
+  .float-3{
+      margin-left: 20px;
+  }
+  .sec-5{
+      width: 100%;
+      height: 300px;
+      border: solid grey 1px;
+      position: relative;
+  }
+
+  .sec-5 span {
+      position: relative;
+  }
+   .another-3{
+     
+       top:50px;
+   }
+
+   button{
+       position: fixed;
+       bottom:10px;
+       right: 1px;
+   }
