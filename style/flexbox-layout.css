@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+   display: flex; 
+   flex-direction: column;
+    margin: 0;
+}
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{ padding-inline-start: 0;}
+ul li {
+    list-style-type: none;
+}
+
+header{
+    color:white;
+    background: blue;
+}
+
+/* nav bar  */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav ul li{
+    margin-right: 0.7em;
+}
+
+
+
+/* main content area */
+.welcome{
+    margin-bottom: 1rem;
+}
+main{
+    min-height: 80vh; 
+    display: flex;
+}
+.main-content{
+flex:2
+}
+
+/* article */
+article{
+    border: grey soldi 1px;
+    margin-right: 0.5em;
+    padding: 0.7em;
+    border-radius: 5px;
+    background: lightcyan;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.article-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+     
+}
+
+.article-meta{
+    margin-bottom: 1em;
+    position: relative;
+    left: 1rem;
+}
+
+.article-content{
+    position: relative;
+	 left:1rem;
+}
+
+/* aside area  side bar*/
+.side-bar{
+    background: rgb(177, 179, 179);
+    flex:1;
+    height: 80vh;
+    border-radius: 5px;
+    padding:8px; 
+
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+
+
+
+
+/* footer area */
+footer{
+    min-height: 100px;
+    color:white;
+    background: #000;
+    padding-top: 1rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-meta{
+    flex: 100px 1;
+}
+.copy-right{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media (max-width:680px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+}
