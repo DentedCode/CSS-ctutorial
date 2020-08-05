@@ -63,7 +63,24 @@ body {
 }
 .main {
   grid-area: main;
-  background: grey;
+  /* background: grey; */
+
+  display: flex;
+  flex-flow: row wrap;
+}
+.item{
+  min-width: 200px;
+  min-height: 200px;
+  background: blueviolet;
+  margin: 10px;
+  box-shadow: -1px 3px 5px rgb(100, 100, 100);
+  border-radius: 5px;
+  flex: 1;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 .footer {
   background: #222;
@@ -71,6 +88,10 @@ body {
   grid-area: footer;
 }
 
+img{
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 768px) {
   .wraper {
     display: grid;
