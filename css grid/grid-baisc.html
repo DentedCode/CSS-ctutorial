@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Basic</title>
+    <style>
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 30px;
+      }
+      .wraper {
+        width: 90%;
+        min-height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        background: blue;
+        padding: 10px;
+
+        /* grid layout css */
+        display: grid;
+        /* grid-row-gap: 10px;
+          grid-column-gap: 5px; */
+        gap: 10px;
+
+        /* auto, px,rem, fr, minmax(),  
+          min-content, max-content, */
+
+        /* grid-template-columns: 20% 1fr 350px; */
+        /* grid-template-rows: 100px minmax(250px, 1fr) 4rem; */
+        grid-template-rows: auto;
+        grid-template-areas:
+          "item1 item2 item3"
+          "item4 item5 item6"
+          " item7 item8 item9";
+        /* justify-content: center;
+        align-items: end; */
+        /* align-content: center; */
+      }
+
+      .wraper > div {
+        background: grey;
+
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+      }
+
+      .item-1 {
+        /* grid-row: 2/3;
+        grid-column: 3/4; */
+        grid-area: item1;
+      }
+      .item-2 {
+        grid-area: item2;
+      }
+      .item-3 {
+        grid-area: item3;
+      }
+      .item-4 {
+        grid-area: item4;
+      }
+      .item-5 {
+        grid-area: item5;
+        /* align-self: end;
+        justify-self: end; */
+        /* place-self: center end; */
+      }
+      .item-6 {
+        grid-area: item6;
+      }
+      .item-7 {
+        grid-area: item7;
+      }
+      .item-8 {
+        /* grid-column: 2 / span 2;
+        grid-row: 2 / span 2; */
+        grid-area: item8;
+      }
+      .item-9 {
+        grid-area: item9;
+      }
+
+      @media (max-width: 700px) {
+        .wraper {
+          background: red;
+
+          grid-template-areas:
+            "item1 item2"
+            "item3 item3"
+            "item4 item4"
+            "item5 item6"
+            "item7 item7"
+            "item8 item9";
+
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wraper">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </div>
+  </body>
+</html>

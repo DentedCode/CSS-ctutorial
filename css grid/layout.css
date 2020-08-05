@@ -1,0 +1,107 @@
+body {
+  /* background: red; */
+  box-sizing: border-box;
+  margin: 1rem;
+}
+.wraper {
+  display: grid;
+  gap: 0.3rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "title title title"
+    "banner banner bb1"
+    "banner banner bb2"
+    "sideMenu main main"
+    "tags main main"
+    "recent main main"
+    "footer footer footer";
+}
+
+.wraper > * {
+  padding: 1rem;
+  font-size: 24px;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background: #222;
+  color: white;
+  grid-area: header;
+}
+.title {
+  background: red;
+  grid-area: title;
+}
+.banner {
+  background: blue;
+  grid-area: banner;
+  color: white;
+}
+.banner-box-1 {
+  background: green;
+  grid-area: bb1;
+}
+.banner-box-2 {
+  background: greenyellow;
+  grid-area: bb2;
+}
+.side-menu {
+  background: pink;
+  grid-area: sideMenu;
+}
+.tags {
+  background: yellow;
+  grid-area: tags;
+}
+.recent {
+  background: brown;
+  grid-area: recent;
+}
+.main {
+  grid-area: main;
+  background: grey;
+}
+.footer {
+  background: #222;
+  color: white;
+  grid-area: footer;
+}
+
+@media (max-width: 768px) {
+  .wraper {
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "title title"
+      "banner banner"
+      "bb1 bb2"
+      "sideMenu sideMenu"
+      "main main"
+      "tags recent"
+      "footer footer";
+  }
+
+@media (max-width: 576px) {
+  .wraper {
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "title"
+      "tags"
+      "bb1"
+      "banner"
+      "bb2"
+      "sideMenu"
+      "main"
+      "recent"
+      "footer";
+  }
+}
