@@ -40,6 +40,7 @@ body {
   background: blue;
   grid-area: banner;
   color: white;
+  min-height: 170px;
 }
 .banner-box-1 {
   background: green;
